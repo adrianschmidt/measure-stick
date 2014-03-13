@@ -57,6 +57,9 @@ javascript: (function($) {
 					ms.css('top', (parseInt(ms.offset().top, 10) + step) + 'px');
 				}
 				break;
+			default:
+				/* If not a key we care about, let it through */
+				return true;
 			}
 			updateLabel();
 			return false;
